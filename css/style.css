@@ -1,16 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 
 div {
-    background-color: cornflowerblue;
+    background-color: #f2f2f2;
     height: 20px;
     width: 20px;
 }
 
 .grid {
-    background-color: lightgrey;
+    background-color: #f2f2f2;
     height: 400px;
     width: 200px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .previous-display-grid {
@@ -24,15 +37,6 @@ div {
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
-}
-
-
-.block {
-    background-color: blue;
-}
-
-.block2 {
-    background-color: purple;
 }
 
 .floor {
