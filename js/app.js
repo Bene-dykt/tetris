@@ -165,8 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
 
         const theTetrominoes = [iTetromino, tTetromino, lTetromino, oTetromino, sTetromino, zTetromino, jTetromino]
-
-
         //randomly select one of the Tetrominoes
         let rand = Math.floor(Math.random() * theTetrominoes.length);
         let currentRotation = 0;
@@ -297,13 +295,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 || current.some(index => squares[currentPosition + index + width].classList.contains('floor'))) {
                 current.forEach(index => squares[index + currentPosition].classList.add('block2'))
                 rand = nextRandom;
-                nextRandom = Math.floor(Math.random() * theTetrominoes.length);
-                displayShape()
                 current = theTetrominoes[rand][currentRotation];
                 currentPosition = 4;
                 gamerOver()
                 addScore()
                 draw()
+                nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+                displayShape()
             }
         }
     }
