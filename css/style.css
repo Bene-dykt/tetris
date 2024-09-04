@@ -1,44 +1,82 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+body {
+    margin: auto;
+    height: 100vh; /* Make the body at least the height of the viewport */
+    max-width: 60rem;
+    background: linear-gradient(
+            #fcc58d,
+            #d4a779
+    );
+}
+
+header {
+    text-align: center;
+    margin-top: 3rem;
 }
 
 div {
-    background-color: #f2f2f2;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
+}
+
+.button {
+    position: relative;
 }
 
 .grid {
     background-color: #f2f2f2;
-    height: 400px;
-    width: 200px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    width: 20rem;
+    height: 40rem;
 }
 
 .game-area {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.game-sidebar {
+    border: 5px solid black;
+}
+
+.game {
+    height: 0;
+    width: 24rem;
 }
 
 .previous-display-grid {
-    height: 80px;
-    width: 80px;
     display: flex;
     flex-wrap: wrap;
+    width: 8rem;
+    height: 8rem;
 }
 
 .previous-shape {
-    height: 80px;
-    width: 80px;
-    margin-bottom: 20px;
+    width: 10rem;
+    padding-left: 2rem;
+    margin-top: -5rem;
 }
 
 .floor {
     background-color: black;
+}
+
+.score,
+.lines-display {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    width: 17.5rem;
+    height: 25rem;
+    background: #f0f0f0;
+    border-radius: 5px;
 }

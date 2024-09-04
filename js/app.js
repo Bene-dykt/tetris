@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const height = 20;
         const width = 10;
-        const startBtn = document.querySelector('button');
+        const startBtn = document.querySelector('.start-button');
 
         const grid = createGrid();
         let squares = Array.from(grid.querySelectorAll('div'));
