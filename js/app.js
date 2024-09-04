@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function updateLevel() {
             level = Math.floor(lines / 10)
             tickDuration = 800 - level * 83;
+            clearInterval(timerId)
             timerId = setInterval(moveDown, tickDuration)
         }
 
@@ -297,11 +298,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 current.forEach(index => squares[index + currentPosition].classList.add('block2'))
                 rand = nextRandom;
                 nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+                displayShape()
                 current = theTetrominoes[rand][currentRotation];
                 currentPosition = 4;
                 gamerOver()
                 addScore()
-                displayShape()
                 draw()
             }
         }
